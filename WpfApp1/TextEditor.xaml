@@ -1,0 +1,43 @@
+﻿<Window x:Class="WpfApp1.TextBox"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="TextEditor" Height="450" Width="800">
+    <Grid>
+        <ScrollViewer>
+
+            <StackPanel>
+                <TextBox x:Name="txt1"  Height="70" Margin="5" Width="753" Text=""></TextBox>
+                <WrapPanel>
+                    <Button Click="setBtn" Height="25" Margin="5" Width="100" Content="Set Text"/>
+                    <Button Click="selectBtn" Height="25" Margin="5" Width="100" Content="Select All"/>
+                    <Button Click="clearBtn" Height="25" Margin="5" Width="100" Content="Clear"/>
+                    <Button Click="prependBtn" Height="25" Margin="5" Width="100" Content="Prepend"/>
+                    <Button Click="insertBtn" Height="25" Margin="5" Width="100" Content="Insert"/>
+                    <Button Click="appendBtn" Height="25" Margin="5" Width="100" Content="Append"/>
+                    <Button Click="cutBtn" Height="25" Margin="5" Width="100" Content="Cut"/>
+                    <Button Click="copyBtn" Height="25" Margin="5" Width="100" Content="Copy"/>
+
+                    <Button Click="pasteBtn" Height="25" Margin="5" Width="100" Content="Past"/>
+                    <Button Click="undoBtn" Height="25" Margin="5" Width="100" Content="Undo"/>
+                    <GroupBox Header="Text Edit" Padding="5" Margin="5" VerticalAlignment="Top">
+                        <StackPanel>
+                            <RadioButton Click="Ediatable" Margin="5">Ediatable</RadioButton>
+                            <RadioButton Click="ReadOnly" Margin="5">ReadOnly</RadioButton>
+                        </StackPanel>
+                    </GroupBox>
+                    <GroupBox Header="Text Align" Padding="5" Margin="5" VerticalAlignment="Top">
+                        <StackPanel>
+                            <RadioButton Click="Left" Margin="5" Content="Left"/>
+                            <RadioButton Click="Center" Margin="5" Content="Center"/>
+                            <RadioButton Click="Right" Margin="5" Content="Right"/>
+                        </StackPanel>
+                    </GroupBox>
+                </WrapPanel>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>

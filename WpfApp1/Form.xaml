@@ -1,0 +1,69 @@
+﻿<Window x:Class="WpfApp1.Form"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Form" Height="450" Width="800">
+    <Border Grid.Row="1" Grid.Column="0" Margin="5,5,5,5" Padding="5" Background="LightYellow" BorderBrush ="SteelBlue" 
+                BorderThickness="2,4,2,4" CornerRadius="3" Grid.ColumnSpan="3" Grid.RowSpan="2" >
+        <ScrollViewer>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="2*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="3*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <StackPanel>
+                    <Label  Margin="5" Content="_FirstName:" Target="{Binding ElementName=txt1}"></Label>
+                    <Label  Margin="5" Content="_LastName" Target="{Binding ElementName=txt2}" ></Label>
+                    <Label  Margin="5" Content="_Gender"   Target="{Binding ElementName=txt3}" ></Label>
+                    <Label  Margin="5" Content="_Adress"   Target="{Binding ElementName=txt4}" ></Label>
+                    <Label  Margin="5" Content="_Phone"  Target="{Binding ElementName=txt5}" ></Label>
+                    <Label  Margin="5" Content="_Mobile"   Target="{Binding ElementName=txt6}" ></Label>
+                    <Label  Margin="5" Content="_Email"  Target="{Binding ElementName=txt7}" ></Label>
+                    <Label  Margin="5" Content="_Job Title"   Target="{Binding ElementName=txt8}" ></Label>
+                </StackPanel>
+                <StackPanel Grid.Column="1" x:Name="stc">
+                    <TextBox x:Name="txt1" HorizontalAlignment="Left" Height="25" Margin="5" Width="200"></TextBox>
+                    <TextBox x:Name="txt2" HorizontalAlignment="Left" Height="25" Margin="5" Width="200"></TextBox>
+                    <TextBox x:Name="txt3" HorizontalAlignment="Left" Height="25" Margin="5" Width="200"></TextBox>
+                    <TextBox x:Name="txt4" HorizontalAlignment="Left" Height="25" Margin="5" Width="200"></TextBox>
+                    <TextBox x:Name="txt5" HorizontalAlignment="Left" Height="25" Margin="5" Width="200"></TextBox>
+                    <TextBox x:Name="txt6" HorizontalAlignment="Left" Height="25" Margin="5" Width="200"></TextBox>
+                    <TextBox x:Name="txt7" HorizontalAlignment="Left" Height="25" Margin="5" Width="200"></TextBox>
+                    <TextBox x:Name="txt8" HorizontalAlignment="Left" Height="25" Margin="5" Width="200"></TextBox>
+                </StackPanel>
+                <StackPanel  HorizontalAlignment="Left" Orientation="Horizontal" Margin="0,12,0,12" Width="280" Grid.Row="1" Grid.Column="1" >
+                    <Border 
+                BorderBrush="Blue"
+                CornerRadius="10"
+                BorderThickness="2"
+                Width="72"
+                Height="30"
+                Margin="10"
+                
+                >
+
+                        <Button  IsDefault="True"  Click="okHandeler" Content="Ok" Margin="1"  Grid.Row="1"/>
+                    </Border>
+                    <Border 
+                BorderBrush="Blue"
+                CornerRadius="10"
+                BorderThickness="2"
+                Width="72"
+                Margin="10"
+
+                Height="30"
+                >
+                        <Button IsCancel="True" Content="Cancel"  Click="cancelHandeler" VerticalAlignment="Center" Margin="1" Grid.Row="1"/>
+                    </Border>
+                </StackPanel>
+            </Grid>
+        </ScrollViewer>
+    </Border>
+</Window>
